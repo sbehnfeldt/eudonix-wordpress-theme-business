@@ -8,3 +8,7 @@ Includes Bootstrap framework and Font Awesome fonts
 Created HTML index page to serve as reference.  Downloaded Bootstrap frame and Font Awesome fonts and icons.  
 Ref: https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/
 
+## Lesson 47) Business Theme HTML & CSS Part B
+Created static HTML for "About Us" and "Blog" pages.
+Noticed that the "pull-right" class on the main nav bar doesn't seem to be working,
+nor does the "active" class on the &lt;li&gt; element.
