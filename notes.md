@@ -20,3 +20,7 @@ Styled the static pages.
 * Begin converting HTML templates to PHP.
 * Add support for nav menus and custom logos.
 * Extract head, header and footer to individual templates.
+
+## Lesson 50) Adding Customizer Sections & Settings
+Modify Customizer with sections for Jumbotron Banner and front-page highlights boxes.
+
