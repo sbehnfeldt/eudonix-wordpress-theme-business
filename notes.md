@@ -12,3 +12,7 @@ Ref: https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/
 Created static HTML for "About Us" and "Blog" pages.
 Noticed that the "pull-right" class on the main nav bar doesn't seem to be working,
 nor does the "active" class on the &lt;li&gt; element.
+
+## Lesson 48) Business Theme HTML & CSS Part C
+Styled the static pages.
+
