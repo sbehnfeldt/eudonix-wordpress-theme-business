@@ -1,3 +1,10 @@
+/*
+    Theme Name: Eduonix Project Business Theme
+    Author: Stephen Behnfeldt
+    Description: Theme based on Project 6, "Business Theme", from Udemy series "Learn to Create WordPress Themes by Building 10 Projects" by Eduonix
+    Version: 1.0
+*/
+
 body {
     padding-top: 20px;
     font-size: 15px;
@@ -200,11 +207,13 @@ article.post img {
 .side-widget {
     margin-bottom: 40px;
 }
+
 .side-widget h3 {
     border-left: 5px var(--color) solid;
     padding-left: 10px;
     margin-bottom: 15px;
 }
+
 .title-bar {
     background: var(--color);
     color: #ffffff;
@@ -232,6 +241,7 @@ article.post .meta li {
     float: left;
     margin-right: 20px;
 }
+
 article.post img {
     width: 100%;
     margin-bottom: 20px;

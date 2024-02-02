@@ -16,3 +16,7 @@ nor does the "active" class on the &lt;li&gt; element.
 ## Lesson 48) Business Theme HTML & CSS Part C
 Styled the static pages.
 
+## Lesson 49) Navigation and Custom Logo Upload
+* Begin converting HTML templates to PHP.
+* Add support for nav menus and custom logos.
+* Extract head, header and footer to individual templates.

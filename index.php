@@ -1,34 +1,10 @@
 <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<?php get_template_part('partials/head'); ?>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/jumbotron-narrow/">
+<body <?php body_class(); ?>>
 
 
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/fontawesome.css">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <title>Business Theme</title>
-</head>
-
-<body>
-
-
-<div class="header clearfix container">
-    <nav>
-        <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="index.html">Home</a></li>
-            <li role="presentation"><a href="about.html">About</a></li>
-            <li role="presentation"><a href="blog.html">Contact</a></li>
-        </ul>
-    </nav>
-    <img src="img/logo.png" alt="Logo">
-</div>
-
+<?php get_template_part('partials/header') ?>
 <div class="jumbotron">
     <div class="container">
         <h1>Jumbotron heading</h1>
@@ -72,7 +48,7 @@
 <section class="content-region-2 pt40 pb40 container">
     <div class="row">
         <div class="col-md-5">
-            <img src="img/pic1.jpg" alt="">
+            <img src="<?php bloginfo( 'template_url' ); ?>/img/pic1.jpg" alt="">
         </div>
         <div class="col-md-7">
             <h3>Theme Features</h3>
@@ -87,42 +63,6 @@
     </div>
 </section>
 
-<footer class="footer content-region-3 pt30 pb40">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4">
-                <h4>Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto at distinctio esse illo
-                    incidunt, laborum libero neque nesciunt officia optio, placeat porro quae rem sapiente sequi, sint
-                    ut velit.</p>
-            </div>
-            <div class="col-lg-4">
-                <h4>List</h4>
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">Four</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-4">
-                <h4>Contact Us</h4>
-                <form action="">
-                    <div>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Email Address">
-                    </div>
-                    <div>
-                        <textarea placeholder="Message"></textarea>
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Send">
-                </form>
-            </div>
-        </div>
-    </div>
-</footer>
-
+<?php get_template_part('partials/footer'); ?>
 </body>
 </html>
