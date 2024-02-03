@@ -91,11 +91,12 @@ article.post img {
 }
 
 .jumbotron {
+    color: #fff;
     text-align: center;
     border-bottom: 1px solid #e5e5e5;
     padding-top: 90px;
     padding-bottom: 90px;
-    background: url("../img/showcase.jpg");
+    min-height: 500px;
 }
 
 

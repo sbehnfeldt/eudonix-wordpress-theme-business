@@ -24,3 +24,6 @@ Styled the static pages.
 ## Lesson 50) Adding Customizer Sections & Settings
 Modify Customizer with sections for Jumbotron Banner and front-page highlights boxes.
 
+## Lesson 51) Implementing Customizer Sections & Settings
+Replace in front-page.php the static HTML for the Jumbotron heading, img, etc. 
+and the highlight box text, icons, etc. with the values specified by the user via the Customizer.

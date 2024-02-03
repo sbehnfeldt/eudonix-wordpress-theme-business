@@ -13,4 +13,9 @@
 
     <title><?php bloginfo( 'name' ); ?></title>
     <?php wp_head(); ?>
+    <style>
+        .jumbotron {
+            background: url(<?php echo get_theme_mod('banner_image', get_bloginfo('template_url') . '/img/showcase.jpg'); ?>) 0 -80px;
+        }
+    </style>
 </head>
