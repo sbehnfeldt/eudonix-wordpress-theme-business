@@ -170,5 +170,5 @@ function business_customize_register( $wp_customizer ) {
         'section'  => 'boxes',
         'priority' => 20
     ] );
-
 }
+add_action( 'customize_register', 'business_customize_register' );

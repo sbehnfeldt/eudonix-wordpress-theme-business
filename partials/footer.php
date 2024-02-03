@@ -2,37 +2,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
-                <h4>Heading</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto at distinctio esse illo
-                    incidunt, laborum libero neque nesciunt officia optio, placeat porro quae rem sapiente sequi, sint
-                    ut velit.</p>
+                <?php if ( is_active_sidebar( 'footer-1' ) ): ?>
+                    <?php dynamic_sidebar( 'footer-1' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-4">
-                <h4>List</h4>
-                <ul>
-                    <li><a href="#">One</a></li>
-                    <li><a href="#">Two</a></li>
-                    <li><a href="#">Three</a></li>
-                    <li><a href="#">Four</a></li>
-                </ul>
+                <?php if ( is_active_sidebar( 'footer-2' ) ): ?>
+                    <?php dynamic_sidebar( 'footer-2' ); ?>
+                <?php endif; ?>
             </div>
             <div class="col-lg-4">
-                <h4>Contact Us</h4>
-                <form action="">
-                    <div>
-                        <input type="text" placeholder="Name">
-                    </div>
-                    <div>
-                        <input type="text" placeholder="Email Address">
-                    </div>
-                    <div>
-                        <textarea placeholder="Message"></textarea>
-                    </div>
-                    <input type="submit" class="btn btn-primary" value="Send">
-                </form>
+                <?php if ( is_active_sidebar( 'footer-3' ) ): ?>
+                    <?php dynamic_sidebar( 'footer-3' ); ?>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </footer>
 <?php wp_footer(); ?>
-<?php
