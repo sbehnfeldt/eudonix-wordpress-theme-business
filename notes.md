@@ -33,3 +33,6 @@ Converted content regions 1 and 2 and footer sections 1, 2 and 3 into widgets.
 
 ## Lesson 53) Blog Index Page
 Blog index page, widget side panel
+
+## Lesson 54) Single Posts & Comments
+Single posts and comments. Template for a page.  Template for archive page.
