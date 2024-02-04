@@ -1,4 +1,6 @@
 <!doctype html>
+<html <?php language_attributes(); ?>>
+
 <?php get_template_part( 'partials/head' ); ?>
 
 <body <?php body_class(); ?>>
@@ -43,9 +45,6 @@
 <?php if ( is_active_sidebar( 'content-region-2' ) ): ?>
     <?php dynamic_sidebar( 'content-region-2' ); ?>
 <?php endif; ?>
-
-    </div>
-</section>
 
 <?php get_template_part( 'partials/footer' ); ?>
 </body>

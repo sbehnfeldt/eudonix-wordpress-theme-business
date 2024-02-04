@@ -1,68 +1,89 @@
 <!doctype html>
-<?php get_template_part('partials/head'); ?>
+<html <?php language_attributes(); ?>>
+<?php get_template_part( 'partials/head' ); ?>
 
 <body <?php body_class(); ?>>
+<?php get_template_part( 'partials/header' ) ?>
 
-
-<?php get_template_part('partials/header') ?>
-<div class="jumbotron">
+<section class="row title-bar">
     <div class="container">
-        <h1>Jumbotron heading</h1>
-        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus
-            commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-    </div>
-</div>
-
-<div class="container">
-    <section class="row marketing">
-        <div class="col-lg-4 block">
-            <i class="fa fa-bar-chart fa-3"></i>
-            <h3>Subheading</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-
-        <div class="col-lg-4 block">
-            <i class="fa fa-code fa-3"></i>
-            <h3>Subheading</h3>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
-        </div>
-
-        <div class="col-lg-4 block">
-            <i class="fa fa-desktop fa-3"></i>
-            <h3>Subheading</h3>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
-    </section>
-</div>
-
-<section class="row content-region-1 pt50 pb40">
-    <div class="col-md-12 container">
-        <h1>Clean Bootstrap Wordpress Theme</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae debitis dolor,
-            doloremque error expedita facilis incidunt, necessitatibus officiis perferendis perspiciatis porro
-            quae quidem voluptate? Autem modi odit provident reiciendis veniam.</p>
-    </div>
-</section>
-
-<section class="content-region-2 pt40 pb40 container">
-    <div class="row">
-        <div class="col-md-5">
-            <img src="<?php bloginfo( 'template_url' ); ?>/img/pic1.jpg" alt="">
-        </div>
-        <div class="col-md-7">
-            <h3>Theme Features</h3>
-            <ul class="list-group">
-                <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i>Clean Code</li>
-                <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i>Custom Showcase Area</li>
-                <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i>Bootstrap Framework</li>
-                <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i>Multiple Color Choices
-                </li>
-            </ul>
+        <div class="col-md-12">
+            <h1><?php echo __( 'Blog' ); ?></h1>
         </div>
     </div>
 </section>
 
-<?php get_template_part('partials/footer'); ?>
+<section class="row main">
+    <div class="container">
+        <div class="row">
+            <?php if ( is_active_sidebar( 'sidebar' ) ): ?>
+            <div class="col-md-8">
+                <?php else: ?>
+                <div class="col-md-12">
+                    <?php endif; ?>
+
+                    <?php if ( have_posts() ): ?>
+                        <?php while ( have_posts() ) : the_post(); ?>
+                            <article class="post row">
+                                <div class="col-md-5">
+                                    <div class="post-thumbnail">
+                                        <?php if ( has_post_thumbnail() ): ?>
+                                            <?php the_post_thumbnail(); ?>
+                                        <?php endif; ?>
+                                    </div>
+                                    <a href="<?php the_permalink(); ?>"
+                                       class="btn btn-primary btn-block"><?php echo __( 'Read More' ); ?></a>
+                                </div>
+                                <div class="col-md-7">
+                                    <ul class="meta">
+                                        <li>By
+                                            <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+                                                <?php the_author(); ?>
+                                            </a>
+                                        </li>
+                                        <li><?php the_time( 'F j, Y g:i a' ); ?></li>
+                                        <li>
+                                            <?php
+                                            $categories = get_the_category();
+                                            $sep        = ', ';
+                                            $output     = '';
+
+                                            if ( $categories ) {
+                                                foreach ( $categories as $cat ) {
+                                                    $output .= '<a href="' . get_category_link( $cat->term_id ) . '">' . $cat->cat_name . '</a>' . $sep;
+                                                }
+                                                echo trim( $output, $sep );
+                                            }
+                                            ?>
+                                        </li>
+                                    </ul>
+                                    <h3><?php the_title(); ?></h3>
+                                    <?php the_excerpt(); ?>
+                                </div>
+                            </article>
+                            <div class="clr"></div>
+                        <?php endwhile; ?>
+                    <?php else: ?>
+                        <b>No Posts</b>
+                    <?php endif; ?>
+                </div>
+
+                <?php if ( is_active_sidebar( 'sidebar' ) ): ?>
+                    <div class="col-md-4"><?php dynamic_sidebar( 'sidebar' ); ?></div>
+                <?php endif; ?>
+            </div>
+        </div>
+</section>
+
+<?php if ( is_active_sidebar( 'content-region-1' ) ): ?>
+    <?php dynamic_sidebar( 'content-region-1' ); ?>
+<?php endif; ?>
+
+<?php if ( is_active_sidebar( 'content-region-2' ) ): ?>
+    <?php dynamic_sidebar( 'content-region-2' ); ?>
+<?php endif; ?>
+
+
+<?php get_template_part( 'partials/footer' ); ?>
 </body>
 </html>

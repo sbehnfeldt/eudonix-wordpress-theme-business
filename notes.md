@@ -31,3 +31,5 @@ and the highlight box text, icons, etc. with the values specified by the user vi
 ## Lesson 52) Theme Widget Positions
 Converted content regions 1 and 2 and footer sections 1, 2 and 3 into widgets.
 
+## Lesson 53) Blog Index Page
+Blog index page, widget side panel

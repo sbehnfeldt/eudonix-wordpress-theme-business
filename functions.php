@@ -7,6 +7,8 @@ function business_theme_setup() {
     // Logo Support
     add_theme_support( 'custom-logo' );
 
+    add_theme_support('post-thumbnails');
+
     register_nav_menus( [
         'primary' => __( 'Primary Menu' )
     ] );
@@ -60,6 +62,15 @@ function init_widgets($id)
         'after_widget' => '',
         'before_title' => '<h4>',
         'after_title' => '</h4>',
+    ]);
+
+    register_sidebar([
+        'name' => 'Sidebar',
+        'id' => 'sidebar',
+        'before_widget' => '<div class="panel panel-default sidebar-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<div class="panel-heading"><h3 class="panel-title">',
+        'after_title' => '</h3></div>',
     ]);
 }
 

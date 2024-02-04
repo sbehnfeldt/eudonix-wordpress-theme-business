@@ -219,6 +219,7 @@ article.post img {
     color: #ffffff;
     padding-bottom: 10px;
     border-bottom: 60px #ddd solid;
+    margin-bottom: 20px;
 }
 
 article.post {
@@ -244,5 +245,32 @@ article.post .meta li {
 
 article.post img {
     width: 100%;
+    height: auto;
     margin-bottom: 20px;
+}
+
+.wp-block-heading {
+    background: var(--color);
+    color: #fff;
+}
+.panel {
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+}
+
+ul.wp-block-categories-list {
+    padding-left: 0;
+}
+
+ul.wp-block-latest-posts li,
+li.cat-item {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    list-style: none;
 }
